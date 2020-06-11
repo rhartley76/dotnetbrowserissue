@@ -5,18 +5,18 @@ namespace DotNetBrowserIssue
 {
     public partial class PdfControl : UserControl
     {
-        private readonly BrowserControl _webBrowser;
-
         public void SetPdf(string pdf)
         {
-            _webBrowser.Url = $"file://{Environment.CurrentDirectory}/{pdf}.pdf";
+            Browser.Url = $"file://{Environment.CurrentDirectory}/{pdf}.pdf";
         }
+
+        public BrowserControl Browser { get; set; }
 
         public PdfControl()
         {
-            _webBrowser = new BrowserControl {Dock = DockStyle.Fill};
+            Browser = new BrowserControl {Dock = DockStyle.Fill};
             InitializeComponent();
-            Controls.Add(_webBrowser);
+            Controls.Add(Browser);
         }
     }
 }

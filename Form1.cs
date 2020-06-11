@@ -34,6 +34,10 @@ namespace DotNetBrowserIssue
                     _pdfControl.SetPdf(_optionsList.Text);
                     _splitView.Panel2.Controls.Add(_pdfControl);
                     break;
+                case "Popup":
+                    _splitView.Panel2.Controls.Add(_pdfControl);
+                    _pdfControl.Browser.ExecuteJavaScript("window.open(\"https://www.google.com/\")");
+                    break;
             }
         }
     }

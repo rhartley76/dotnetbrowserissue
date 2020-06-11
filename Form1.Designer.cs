@@ -42,14 +42,15 @@
             // 
             this._optionsList.Dock = System.Windows.Forms.DockStyle.Fill;
             this._optionsList.FormattingEnabled = true;
-            this._optionsList.ItemHeight = 29;
             this._optionsList.Items.AddRange(new object[] {
             "Item1",
             "Item2",
-            "Item3"});
+            "Item3",
+            "Popup"});
             this._optionsList.Location = new System.Drawing.Point(0, 0);
+            this._optionsList.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this._optionsList.Name = "_optionsList";
-            this._optionsList.Size = new System.Drawing.Size(495, 818);
+            this._optionsList.Size = new System.Drawing.Size(212, 367);
             this._optionsList.TabIndex = 0;
             this._optionsList.SelectedValueChanged += new System.EventHandler(this._optionsList_SelectedValueChanged);
             // 
@@ -57,6 +58,7 @@
             // 
             this._splitView.Dock = System.Windows.Forms.DockStyle.Fill;
             this._splitView.Location = new System.Drawing.Point(0, 0);
+            this._splitView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this._splitView.Name = "_splitView";
             // 
             // _splitView.Panel1
@@ -66,8 +68,9 @@
             // _splitView.Panel2
             // 
             this._splitView.Panel2.Controls.Add(this._displayLabel);
-            this._splitView.Size = new System.Drawing.Size(1486, 818);
-            this._splitView.SplitterDistance = 495;
+            this._splitView.Size = new System.Drawing.Size(637, 367);
+            this._splitView.SplitterDistance = 212;
+            this._splitView.SplitterWidth = 2;
             this._splitView.TabIndex = 1;
             // 
             // _displayLabel
@@ -75,17 +78,19 @@
             this._displayLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this._displayLabel.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._displayLabel.Location = new System.Drawing.Point(0, 0);
+            this._displayLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this._displayLabel.Name = "_displayLabel";
-            this._displayLabel.Size = new System.Drawing.Size(987, 818);
+            this._displayLabel.Size = new System.Drawing.Size(423, 367);
             this._displayLabel.TabIndex = 0;
             this._displayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1486, 818);
+            this.ClientSize = new System.Drawing.Size(637, 367);
             this.Controls.Add(this._splitView);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Form1";
             this.Text = "Form1";
             this._splitView.Panel1.ResumeLayout(false);
